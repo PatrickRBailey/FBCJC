@@ -1,18 +1,14 @@
 import React from 'react';
+import Header from './Header';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() { 
-    return ( 
-    <div>
-      <h1>This Is A Test</h1>
-      <p>Testing the auto deploy feature</p>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <Header />
+      </div>
+    );
   }
 }
- 
+
 export default App;
