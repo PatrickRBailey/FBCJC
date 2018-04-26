@@ -1,27 +1,42 @@
 import React from 'react';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
-const Nav = () => (
-  <ul style={styles.NavStyles}>
-    <li>I&#39;m New Here</li>
-    <li>Connect</li>
-    <li>Messages</li>
-    <li>Give</li>
-    <li>Events</li>
-  </ul>
+const Navigation = () => (
+  <Navbar inverse collapseOnSelect>
+    <Navbar.Header>
+      <Navbar.Toggle />
+    </Navbar.Header>
+    <Navbar.Collapse>
+      <Nav style={styles.NavStyles}>
+        <NavItem eventKey={1} href="#">
+          I&#39;m New Here
+        </NavItem>
+        <NavItem eventKey={2} href="#">
+          Connect
+        </NavItem>
+        <NavItem eventKey={3} href="#">
+          Messages
+        </NavItem>
+        <NavItem eventKey={4} href="#">
+          Give
+        </NavItem>
+        <NavItem eventKey={5} href="#">
+          Events
+        </NavItem>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 
 const styles = {
   NavStyles: {
-    listStyleType: 'none',
-    color: 'white',
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    background: 'black',
-    padding: 20,
+    width: '100%',
   },
 };
 
-export default Nav;
+export default Navigation;

@@ -10,6 +10,7 @@ const styles = {
   LogoStyle: {
     margin: 10,
     marginLeft: 40,
+    padding: 10,
   },
 };
 

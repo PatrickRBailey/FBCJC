@@ -1,14 +1,13 @@
 import React from 'react';
 import Logo from './Logo';
-import Nav from './Nav';
+import Navigation from './Nav';
 
 const Header = () => (
   <div>
     <Logo />
-    <Nav />
+    <Navigation />
   </div>
 );
-
 
 export default Header;
 
