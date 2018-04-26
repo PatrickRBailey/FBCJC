@@ -9,6 +9,7 @@ class App extends React.Component {
     return ( 
     <div>
       <h1>This Is A Test</h1>
+      <p>Testing the auto deploy feature</p>
     </div>
   );
   }
