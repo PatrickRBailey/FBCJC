@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { isMobile } from 'react-device-detect';
 
 const Navigation = () => (
   <Navbar inverse collapseOnSelect>
@@ -7,7 +8,7 @@ const Navigation = () => (
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav style={styles.NavStyles}>
+      <Nav style={isMobile ? styles.MobileNavStyles : styles.NavStyles}>
         <NavItem eventKey={1} href="#">
           I&#39;m New Here
         </NavItem>
@@ -35,6 +36,15 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
+    width: '100%',
+  },
+
+  MobileNavStyles: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'right',
     width: '100%',
   },
 };
